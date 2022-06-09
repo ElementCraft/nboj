@@ -1,12 +1,14 @@
 import { Api, Get, Params, useContext } from "@midwayjs/hooks";
 import { Context } from "@midwayjs/koa";
+import { useEntityModel } from "@midwayjs/orm";
+import { Role } from "../entity/role";
 
-export const getBookByParams = Api(
+export const getAllRole = Api(
     Get('/role/list'),
-    Params<{ id: string }>(),
     async () => {
         const ctx = useContext<Context>();
-        const { id } = ctx.params;
-        return {};
+        const roleModel = useEntityModel(Role);
+        const roles = roleModel.find({});
+        return roles;
     }
 );

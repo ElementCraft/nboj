@@ -1,5 +1,6 @@
+import { MidwayConfig } from '@midwayjs/core';
+
 export default {
-  // ...
   orm: {
     type: 'mysql',
     host: '139.159.151.52',
@@ -12,4 +13,4 @@ export default {
     dateStrings: true,
     driver: require('mysql2'),
   },
-}
+} as MidwayConfig;

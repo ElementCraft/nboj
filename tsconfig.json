@@ -12,6 +12,7 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "types": ["element-plus/global"],
+    "emitDecoratorMetadata": true,
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "ts-node": {

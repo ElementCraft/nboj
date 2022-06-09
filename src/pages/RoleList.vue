@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import { List } from 'lodash';
 import { ref } from 'vue';
+import { getAllRole } from '../api/role';
+import { Role } from '../entity/role';
+
+let roles = ref([])
+
+getAllRole().then((v) => roles.value= v);
 
 </script>
 
